@@ -1,263 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rupa's Tech Blog</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infosys Landing Page</title>
 
-        body {
-            background: #f4f7fb;
-            color: #333
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
 
-        header {
-            background: #0f172a;
-            color: #fff;
-            padding: 20px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap
-        }
+body{
+    background:#f5f5f5;
+}
 
-        .logo {
-            font-size: 28px;
-            font-weight: bold;
-            color: #38bdf8
-        }
+/* Navigation */
+nav{
+    background:#007cc3;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 60px;
+}
 
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: bold
-        }
+.logo{
+    color:white;
+    font-size:28px;
+    font-weight:bold;
+}
 
-        nav a:hover {
-            color: #38bdf8
-        }
+nav ul{
+    display:flex;
+    list-style:none;
+}
 
-        .hero {
-            text-align: center;
-            padding: 80px 20px;
-            background: linear-gradient(135deg, #0f172a, #2563eb);
-            color: #fff
-        }
+nav ul li{
+    margin-left:25px;
+}
 
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 15px
-        }
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:17px;
+}
 
-        .hero p {
-            font-size: 18px;
-            max-width: 750px;
-            margin: auto;
-            line-height: 1.7
-        }
+nav ul li a:hover{
+    color:yellow;
+}
 
-        .btn {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 12px 28px;
-            background: #38bdf8;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 6px
-        }
+/* Hero Section */
+.hero{
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("images/banner.jpg");
+    background-size:cover;
+    background-position:center;
+    height:200px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    color:white;
+    text-align:center;
+}
 
-        .blogs {
-            width: 90%;
-            max-width: 1200px;
-            margin: 50px auto
-        }
+.hero h1{
+    font-size:45px;
+    margin-bottom:15px;
+}
 
-        .blogs h2 {
-            text-align: center;
-            margin-bottom: 35px;
-            color: #0f172a
-        }
+.hero p{
+    font-size:20px;
+    margin-bottom:20px;
+}
 
-        .cards {
-            display: flex;
-            gap: 25px;
-            flex-wrap: wrap;
-            justify-content: center
-        }
+.hero button{
+    padding:12px 25px;
+    border:none;
+    background:#007cc3;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    border-radius:5px;
+}
 
-        .card {
-            background: #fff;
-            width: 330px;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, .1)
-        }
+.hero button:hover{
+    background:#005b91;
+}
 
-        .card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover
-        }
+/* About */
+.about{
+    padding:50px;
+    text-align:center;
+    background:white;
+}
 
-        .card-content {
-            padding: 20px
-        }
+.about h2{
+    color:#007cc3;
+    margin-bottom:20px;
+}
 
-        .card h3 {
-            color: #2563eb;
-            margin-bottom: 10px
-        }
+.about p{
+    max-width:800px;
+    margin:auto;
+    line-height:1.8;
+}
 
-        .card p {
-            line-height: 1.6;
-            color: #555
-        }
+/* Services */
+.services{
+    padding:50px;
+    text-align:center;
+}
 
-        .read {
-            display: inline-block;
-            margin-top: 15px;
-            color: #2563eb;
-            text-decoration: none;
-            font-weight: bold
-        }
+.services h2{
+    color:#007cc3;
+    margin-bottom:30px;
+}
 
-        .about,.contact {
-            background: #fff;
-            width: 90%;
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 35px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, .1)
-        }
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
 
-        .about h2,
-        .contact h2 {
-            margin-bottom: 15px;
-            color: #0f172a;
-        }
+.card{
+    background:white;
+    width:250px;
+    padding:20px;
+    border-radius:8px;
+    box-shadow:0 0 10px gray;
+}
 
-        .about p,
-        .contact p {
-            line-height: 1.8
-        }
+.card h3{
+    margin-bottom:10px;
+    color:#007cc3;
+}
 
-        footer {
-            margin-top: 40px;
-            background: #0f172a;
-            color: #fff;
-            text-align: center;
-            padding: 20px
-        }
+/* Careers */
+.careers{
+    background:#007cc3;
+    color:white;
+    text-align:center;
+    padding:50px;
+}
 
-        @media(max-width:468px) {
-            header {
-                flex-direction: column
-            }
+.careers h2{
+    margin-bottom:15px;
+}
 
-            nav {
-                margin-top: 15px
-            }
+.careers button{
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    background:white;
+    color:#007cc3;
+    font-size:18px;
+    cursor:pointer;
+    border-radius:5px;
+}
 
-            nav a {
-                display: block;
-                margin: 10px 0
-            }
+/* Footer */
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
 
-            .hero h1 {
-                font-size: 36px
-            }
+/* Mobile */
+@media(max-width:768px){
 
-            .card {
-                width: 100%
-            }
-        }
-    </style>
+nav{
+    flex-direction:column;
+}
+
+nav ul{
+    flex-direction:column;
+    margin-top:10px;
+}
+
+nav ul li{
+    margin:10px 0;
+}
+
+.hero h1{
+    font-size:30px;
+}
+
+.cards{
+    flex-direction:column;
+    align-items:center;
+}
+}
+</style>
+
 </head>
-
 <body>
 
-    <header>
-        <div class="logo">Rupa's Tech Blog</div>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Articles</a>
-            <a href="#">Categories</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+<!-- Navigation -->
+<nav>
+    <div class="logo">Infosys</div>
 
-    <section class="hero">
-        <h1>Welcome to Rupa's Tech Blog</h1>
-        <p>Hello! I'm <b>Rupa Devi</b>, a Full Stack Python learner. I share interview questions, web development
-            tutorials, and programming concepts to help beginners learn HTML, CSS, Python, and more.</p>
-        <a href="#blogs" class="btn">Explore Articles</a>
-    </section>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#careers">Careers</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
 
-    <section class="blogs" id="blogs">
-        <h2>Latest Articles</h2>
+<!-- Hero -->
+<section class="hero">
+    <h1>Navigate Your Next</h1>
+    <p>Empowering businesses through digital transformation.</p>
+    <button>Learn More</button>
+</section>
 
-        <div class="cards">
+<!-- About -->
+<section class="about" id="about">
+    <h2>About Infosys</h2>
+    <p>
+        Infosys is a global leader in consulting, technology services,
+        and digital transformation. We help businesses innovate and
+        achieve sustainable growth through advanced technologies.
+    </p>
+</section>
 
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800" alt="HTML">
-                <div class="card-content">
-                    <h3>Top 30 HTML Interview Questions</h3>
-                    <p>Practice the 30 most commonly asked HTML interview questions with simple explanations.</p>
-                    <a href="html-interview.html" class="read">Read More →</a>
-                </div>
-            </div>
+<!-- Services -->
+<section class="services" id="services">
+    <h2>Our Services</h2>
 
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800" alt="CSS">
-                <div class="card-content">
-                    <h3>Top 30 CSS Interview Questions</h3>
-                    <p>Learn important CSS interview questions including Flexbox, Grid, selectors, positioning and
-                        responsive design.</p>
-                    <a href="css-interview.html" class="read">Read More →</a>
-                </div>
-            </div>
+    <div class="cards">
 
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800" alt="Python">
-                <div class="card-content">
-                    <h3>Top 30 Python Interview Questions</h3>
-                    <p>Prepare for Python interviews with questions on variables, loops, functions, OOP and exceptions.
-                    </p>
-                    <a href="python-interview.html" class="read">Read More →</a>
-                </div>
-            </div>
-
+        <div class="card">
+            <h3>Cloud Computing</h3>
+            <p>Modern cloud solutions for businesses worldwide.</p>
         </div>
-    </section>
 
-    <section class="about" id="about">
-        <h2>About Me</h2>
-        <p>I'm <strong>Rupa Devi</strong>, a final-year B.Tech Computer Science student currently learning Full Stack
-            Python Development. This blog documents my learning journey and provides beginner-friendly tutorials and
-            interview preparation material for HTML, CSS, Python, Django, SQL, Git and GitHub.</p>
-    </section>
+        <div class="card">
+            <h3>Artificial Intelligence</h3>
+            <p>AI-powered solutions to improve business efficiency.</p>
+        </div>
 
-    <section class="contact" id="contact">
-        <h2>Connect With Me</h2>
-        <p><strong>LinkedIn:</strong> https://www.linkedin.com/in/rupa-devi-7a54021b7</p>
-        <p><strong>GitHub:</strong> https://github.com/rupadevi664/</p>
-        <p><strong>Email:</strong> rupadevigodi@gmail.com/<p>
-    </section>
+        <div class="card">
+            <h3>Cyber Security</h3>
+            <p>Protecting organizations with secure digital solutions.</p>
+        </div>
 
-    <footer>
-        <p>© 2026 Rupa's Tech Blog | Designed by Rupa Devi</p>
-    </footer>
+    </div>
+</section>
+
+<!-- Careers -->
+<section class="careers" id="careers">
+    <h2>Join Our Team</h2>
+    <p>Build your career with one of the world's leading IT companies.</p>
+    <button>Apply Now</button>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 Infosys Learning Project | Designed using HTML & CSS</p>
+</footer>
 
 </body>
-
 </html>

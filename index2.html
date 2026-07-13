@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rupa's Tech Blog</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif
+        }
+
+        body {
+            background: #f4f7fb;
+            color: #333
+        }
+
+        header {
+            background: #0f172a;
+            color: #fff;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #38bdf8
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold
+        }
+
+        nav a:hover {
+            color: #38bdf8
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #0f172a, #2563eb);
+            color: #fff
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 15px
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 750px;
+            margin: auto;
+            line-height: 1.7
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 28px;
+            background: #38bdf8;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px
+        }
+
+        .blogs {
+            width: 90%;
+            max-width: 1200px;
+            margin: 50px auto
+        }
+
+        .blogs h2 {
+            text-align: center;
+            margin-bottom: 35px;
+            color: #0f172a
+        }
+
+        .cards {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            justify-content: center
+        }
+
+        .card {
+            background: #fff;
+            width: 330px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .1)
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover
+        }
+
+        .card-content {
+            padding: 20px
+        }
+
+        .card h3 {
+            color: #2563eb;
+            margin-bottom: 10px
+        }
+
+        .card p {
+            line-height: 1.6;
+            color: #555
+        }
+
+        .read {
+            display: inline-block;
+            margin-top: 15px;
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: bold
+        }
+
+        .about,.contact {
+            background: #fff;
+            width: 90%;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .1)
+        }
+
+        .about h2,
+        .contact h2 {
+            margin-bottom: 15px;
+            color: #0f172a;
+        }
+
+        .about p,
+        .contact p {
+            line-height: 1.8
+        }
+
+        footer {
+            margin-top: 40px;
+            background: #0f172a;
+            color: #fff;
+            text-align: center;
+            padding: 20px
+        }
+
+        @media(max-width:468px) {
+            header {
+                flex-direction: column
+            }
+
+            nav {
+                margin-top: 15px
+            }
+
+            nav a {
+                display: block;
+                margin: 10px 0
+            }
+
+            .hero h1 {
+                font-size: 36px
+            }
+
+            .card {
+                width: 100%
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">Rupa's Tech Blog</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Articles</a>
+            <a href="#">Categories</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to Rupa's Tech Blog</h1>
+        <p>Hello! I'm <b>Rupa Devi</b>, a Full Stack Python learner. I share interview questions, web development
+            tutorials, and programming concepts to help beginners learn HTML, CSS, Python, and more.</p>
+        <a href="#blogs" class="btn">Explore Articles</a>
+    </section>
+
+    <section class="blogs" id="blogs">
+        <h2>Latest Articles</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800" alt="HTML">
+                <div class="card-content">
+                    <h3>Top 30 HTML Interview Questions</h3>
+                    <p>Practice the 30 most commonly asked HTML interview questions with simple explanations.</p>
+                    <a href="html-interview.html" class="read">Read More →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800" alt="CSS">
+                <div class="card-content">
+                    <h3>Top 30 CSS Interview Questions</h3>
+                    <p>Learn important CSS interview questions including Flexbox, Grid, selectors, positioning and
+                        responsive design.</p>
+                    <a href="css-interview.html" class="read">Read More →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800" alt="Python">
+                <div class="card-content">
+                    <h3>Top 30 Python Interview Questions</h3>
+                    <p>Prepare for Python interviews with questions on variables, loops, functions, OOP and exceptions.
+                    </p>
+                    <a href="python-interview.html" class="read">Read More →</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h2>About Me</h2>
+        <p>I'm <strong>Rupa Devi</strong>, a final-year B.Tech Computer Science student currently learning Full Stack
+            Python Development. This blog documents my learning journey and provides beginner-friendly tutorials and
+            interview preparation material for HTML, CSS, Python, Django, SQL, Git and GitHub.</p>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Connect With Me</h2>
+        <p><strong>LinkedIn:</strong> https://www.linkedin.com/in/rupa-devi-7a54021b7</p>
+        <p><strong>GitHub:</strong> https://github.com/rupadevi664/</p>
+        <p><strong>Email:</strong> rupadevigodi@gmail.com/<p>
+    </section>
+
+    <footer>
+        <p>© 2026 Rupa's Tech Blog | Designed by Rupa Devi</p>
+    </footer>
+
+</body>
+
+</html>
