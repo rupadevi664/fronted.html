@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infosys Landing Page</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+}
+
+/* Navigation */
+nav{
+    background:#007cc3;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 60px;
+}
+
+.logo{
+    color:white;
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:17px;
+}
+
+nav ul li a:hover{
+    color:yellow;
+}
+
+/* Hero Section */
+.hero{
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("images/banner.jpg");
+    background-size:cover;
+    background-position:center;
+    height:200px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    color:white;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:20px;
+}
+
+.hero button{
+    padding:12px 25px;
+    border:none;
+    background:#007cc3;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+.hero button:hover{
+    background:#005b91;
+}
+
+/* About */
+.about{
+    padding:50px;
+    text-align:center;
+    background:white;
+}
+
+.about h2{
+    color:#007cc3;
+    margin-bottom:20px;
+}
+
+.about p{
+    max-width:800px;
+    margin:auto;
+    line-height:1.8;
+}
+
+/* Services */
+.services{
+    padding:50px;
+    text-align:center;
+}
+
+.services h2{
+    color:#007cc3;
+    margin-bottom:30px;
+}
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:white;
+    width:250px;
+    padding:20px;
+    border-radius:8px;
+    box-shadow:0 0 10px gray;
+}
+
+.card h3{
+    margin-bottom:10px;
+    color:#007cc3;
+}
+
+/* Careers */
+.careers{
+    background:#007cc3;
+    color:white;
+    text-align:center;
+    padding:50px;
+}
+
+.careers h2{
+    margin-bottom:15px;
+}
+
+.careers button{
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    background:white;
+    color:#007cc3;
+    font-size:18px;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+/* Footer */
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* Mobile */
+@media(max-width:768px){
+
+nav{
+    flex-direction:column;
+}
+
+nav ul{
+    flex-direction:column;
+    margin-top:10px;
+}
+
+nav ul li{
+    margin:10px 0;
+}
+
+.hero h1{
+    font-size:30px;
+}
+
+.cards{
+    flex-direction:column;
+    align-items:center;
+}
+}
+</style>
+
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+    <div class="logo">Infosys</div>
+
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#careers">Careers</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+    <h1>Navigate Your Next</h1>
+    <p>Empowering businesses through digital transformation.</p>
+    <button>Learn More</button>
+</section>
+
+<!-- About -->
+<section class="about" id="about">
+    <h2>About Infosys</h2>
+    <p>
+        Infosys is a global leader in consulting, technology services,
+        and digital transformation. We help businesses innovate and
+        achieve sustainable growth through advanced technologies.
+    </p>
+</section>
+
+<!-- Services -->
+<section class="services" id="services">
+    <h2>Our Services</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Cloud Computing</h3>
+            <p>Modern cloud solutions for businesses worldwide.</p>
+        </div>
+
+        <div class="card">
+            <h3>Artificial Intelligence</h3>
+            <p>AI-powered solutions to improve business efficiency.</p>
+        </div>
+
+        <div class="card">
+            <h3>Cyber Security</h3>
+            <p>Protecting organizations with secure digital solutions.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Careers -->
+<section class="careers" id="careers">
+    <h2>Join Our Team</h2>
+    <p>Build your career with one of the world's leading IT companies.</p>
+    <button>Apply Now</button>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 Infosys Learning Project | Designed using HTML & CSS</p>
+</footer>
+
+</body>
+</html>

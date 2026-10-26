@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Page</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-sky-200 min-h-screen flex items-center justify-center p-8">
+
+  <div class="w-full max-w-6xl bg-white rounded-[24px] overflow-hidden shadow-xl">
+
+    <!-- TOP SHIPPING BAR -->
+    <div class="bg-blue-500 text-white text-[10px] text-center py-1">
+      FREE SHIPPING on orders over $50
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="h-[70px] border-b flex items-center justify-between px-10">
+
+      <!-- Logo -->
+      <div class="text-3xl font-semibold italic">
+        squish
+      </div>
+
+      <!-- Menu -->
+      <div class="flex items-center gap-10 text-sm">
+        <a href="#" class="hover:text-blue-500">Shop</a>
+        <a href="#" class="hover:text-blue-500">Who We Are</a>
+        <a href="#" class="hover:text-blue-500">Contact</a>
+      </div>
+
+      <!-- Right Icons -->
+      <div class="flex items-center gap-5 text-sm">
+
+        <span>⌕ Search</span>
+        <span>🛒</span>
+        <span>♙</span>
+        <span>En⌄</span>
+
+      </div>
+    </nav>
+
+    <!-- PRODUCT SECTION -->
+    <div class="grid grid-cols-1 md:grid-cols-2 min-h-[650px]">
+
+      <!-- LEFT IMAGE -->
+      <div class="relative bg-gray-50 flex items-center justify-center">
+
+        <!-- Sale badge -->
+        <div
+          class="absolute top-5 right-5 w-14 h-14 bg-yellow-300 rounded-full flex items-center justify-center text-xs font-semibold"
+        >
+          SALE
+        </div>
+
+        <img
+          src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee"
+          alt="Pet Bed"
+          class="w-[80%] object-contain"
+        />
+
+        <!-- slider dots -->
+        <div class="absolute bottom-7 flex gap-2">
+          <span class="w-2 h-2 bg-black rounded-full"></span>
+          <span class="w-2 h-2 border border-gray-500 rounded-full"></span>
+          <span class="w-2 h-2 border border-gray-500 rounded-full"></span>
+          <span class="w-2 h-2 border border-gray-500 rounded-full"></span>
+          <span class="w-2 h-2 border border-gray-500 rounded-full"></span>
+          <span class="w-2 h-2 border border-gray-500 rounded-full"></span>
+        </div>
+
+      </div>
+
+      <!-- RIGHT PRODUCT INFO -->
+      <div class="px-16 py-12 flex flex-col justify-center">
+
+        <h1 class="text-3xl font-medium mb-2">
+          Comfy pet bed
+        </h1>
+
+        <p class="text-sm mb-7">
+          Designed with ♡ by PetX
+        </p>
+
+        <!-- Price -->
+        <div class="flex items-center gap-3 mb-6">
+          <span class="text-xl font-medium">
+            $29,50
+          </span>
+
+          <span class="text-gray-400 line-through">
+            $55,50
+          </span>
+        </div>
+
+        <!-- Colors -->
+        <div class="flex items-center gap-3 mb-4">
+          <button class="w-6 h-6 rounded-full bg-gray-400 border-2 border-gray-500"></button>
+          <button class="w-6 h-6 rounded-full bg-amber-100"></button>
+          <button class="w-6 h-6 rounded-full bg-slate-200"></button>
+        </div>
+
+        <!-- Availability -->
+        <div class="mb-6">
+          <span
+            class="bg-green-100 text-green-500 text-xs px-3 py-1 rounded"
+          >
+            • Available
+          </span>
+        </div>
+
+        <!-- Description -->
+        <p class="text-sm leading-6 mb-3">
+          Made from high-quality, ultra-soft materials, this pet bed
+          provides a cozy retreat for your beloved pet. The bed features
+          a plush cover that is easy to maintain, ensuring a clean and
+          fresh resting place for your companion.
+        </p>
+
+        <button class="text-xs text-left mb-4">
+          Discover more ↓
+        </button>
+
+        <hr class="mb-5" />
+
+        <!-- Features -->
+        <div class="flex items-center gap-3 text-sm mb-5">
+          <span>Features</span>
+
+          <span class="bg-gray-100 px-3 py-1 rounded-full">
+            Waterproof
+          </span>
+
+          <span class="bg-gray-100 px-3 py-1 rounded-full">
+            Eco-friendly
+          </span>
+        </div>
+
+        <!-- Guides -->
+        <div class="flex gap-5 text-sm mb-5">
+          <a href="#" class="underline">
+            + Size Guide
+          </a>
+
+          <a href="#" class="underline">
+            + Care Guide
+          </a>
+        </div>
+
+        <hr class="mb-5" />
+
+        <!-- Bottom -->
+        <div class="flex items-center gap-6">
+
+          <!-- Quantity -->
+          <div class="flex items-center gap-4">
+            <button class="text-xl">−</button>
+
+            <span>1</span>
+
+            <button class="text-xl">+</button>
+          </div>
+
+          <!-- Add Cart -->
+          <button
+            class="flex-1 bg-black text-white rounded-full py-3 hover:bg-gray-800 transition"
+          >
+            Add to Cart
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
+1px=4px

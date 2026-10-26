@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>OTP Generator</title>
+</head>
+<body>
+    <h2>OTP Generator</h2>
+
+    <button id="otpBtn" onclick="generateOTP()">
+        Generate OTP
+    </button>
+
+    <script>
+        let count = 0;
+
+        function generateOTP() {
+            const otp = Math.floor(100000 + Math.random() * 900000);
+
+            console.log("OTP:", otp);
+
+            count++;
+
+            if (count === 5) {
+                document.getElementById("otpBtn").disabled = true;
+
+                alert("Your limit is over! Only 5 OTPs are allowed.");
+            }
+        }
+    </script>
+</body>
+</html>
+

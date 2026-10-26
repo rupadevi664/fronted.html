@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>OTP Generator</title>
+</head>
+<body>
+    <h2>OTP Generator</h2>
+
+    <script>
+        function generateOTP() {
+            const otp = Math.floor(100000 + Math.random() * 900000);
+            console.log("OTP:", otp);
+        }
+
+        function otpHandling() {
+            let count = 1;
+
+            // First OTP immediately
+            generateOTP();
+
+            const interval = setInterval(() => {
+                generateOTP();
+                count++;
+
+                if (count === 5) {
+                    clearInterval(interval);
+                    console.log("OTP generation stopped");
+                }
+            }, 30000);
+        }
+
+        otpHandling();
+    </script>
+</body>
+</html>
