@@ -11,6 +11,8 @@
         Generate OTP
     </button>
 
+    <p id="message"></p>
+
     <script>
         let count = 0;
         let interval;
@@ -18,14 +20,15 @@
         function generateOTP() {
             const otp = Math.floor(100000 + Math.random() * 900000);
             console.log("OTP:", otp);
+
             count++;
 
             if (count === 5) {
                 clearInterval(interval);
 
                 document.getElementById("otpBtn").disabled = true;
-
-                alert("Your limit is over! Only 5 OTPs are allowed.");
+                document.getElementById("message").textContent =
+                    "Your limit is over! Button disabled.";
             }
         }
 
@@ -35,14 +38,12 @@
             // Prevent multiple clicks
             btn.disabled = true;
 
-            // First OTP immediately after clicking
+            // First OTP immediately
             generateOTP();
 
-            // Generate remaining OTPs every 30 seconds
+            // Remaining OTPs every 30 seconds
             if (count < 5) {
-                interval = setInterval(() => {
-                    generateOTP();
-                }, 30000);
+                interval = setInterval(generateOTP, 30000);
             }
         }
     </script>
